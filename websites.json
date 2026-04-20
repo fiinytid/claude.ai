@@ -1,0 +1,22 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/",                          "destination": "app/index/index.html" },
+    { "source": "/login",                     "destination": "app/login/login.html" },
+    { "source": "/payment",                   "destination": "app/payment/payment.html" },
+    { "source": "/setup-discord",             "destination": "app/setup-discord/setup-discord.html" },
+    { "source": "/privacy-policy",            "destination": "app/privacy.html" },
+    { "source": "/terms-of-service",          "destination": "app/terms.html" },
+    { "source": "/admin-panel",               "destination": "app/admin/admin-panel.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options",        "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy",        "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
